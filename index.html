@@ -4,62 +4,436 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <section id="home">
     
-<div class="container">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#service">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
 
-    <div class="header">
-        <h2>Create Account</h2>
+              <li class="nav-item">
+                <a class="nav-link" href="#blog">Blog</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex m-auto">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-twitter"></i>
+              <button class="btn btn-outline-light" type="submit">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section> 
+<section id="banner">
+ 
+ <div class="container">
+  <div class="banner">
+      <p>FREELANCE DIGITAL DESIGNER</p>
+      <h2>Hi, I’m <span>Jone Doe</span></h2>
+      <h3>based in USA.</h3>
+  </div>
+ </div>
+</section>
+
+
+<!-- ==================About section starts============================= -->
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <img src="images/about.jpg" alt="">
+      </div>
+
+      <div class="col-md-7 offset-2">
+        <div class="about-text">
+          <h1>About Me</h1>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+          </p>
+        </div>
+        <!--==================abouts tabs start==========  -->
+        <div class="tabs">
+          <button id="btn1" onclick="openMain()" class="active-btn">Main Skills</button>
+          <button id="btn2" onclick="openAwards()">Awards</button>
+          <button id="btn3" onclick="openExperiance()">Experiance</button>
+          <button id="btn4" onclick="openEducation()">Education & Certificate</button>
+        </div>
+       
+        <div class="main-tab-contant">
+        <div id="tab-contant1" class="tab-contant">
+         <h6> User experience design -<span> UI/UX</span> </h6>
+          <p> Delight the user and make it work.</p>
+          <h6>Web and user interface design - <span>Development</span></h6>
+          <p> Websites, web experiences, ...</p>
+          <h6>Interaction design - <span>Animation</span></h6>
+          <p> I like to move it move it.</p>
+        </div>
+       
+        <div id="tab-contant2" class="tab-contant">
+          <h6> User experience design -<span> ML/AI</span> </h6>
+          <p> Delight the user and make it work.</p>
+          <h6>Web and user interface design - <span>Development</span></h6>
+          <p> Websites, web experiences, ...</p>
+          <h6>Interaction design - <span>Animation</span></h6>
+          <p> I like to move it move it.</p>
+        </div>
+        <div id="tab-contant3" class="tab-contant">
+          <h6> User experience design -<span> APP DEVELOPEMENT</span> </h6>
+          <p> Delight the user and make it work.</p>
+          <h6>Web and user interface design - <span>Development</span></h6>
+          <p> Websites, web experiences, ...</p>
+          <h6>Interaction design - <span>Animation</span></h6>
+          <p> I like to move it move it.</p>
+        </div>
+        <div id="tab-contant4" class="tab-contant">
+          <h6> User experience design -<span> WEB DEVELOPEMENT</span> </h6>
+          <p> Delight the user and make it work.</p>
+          <h6>Web and user interface design - <span>Development</span></h6>
+          <p> Websites, web experiences, ...</p>
+          <h6>Interaction design - <span>Animation</span></h6>
+          <p> I like to move it move it.</p>
+        </div>
+      </div> 
+        <!--==================abouts tabs end============  -->
+      </div>
     </div>
-    <form action="" class="form" id="form">
+  </div>
+</section>
 
-        <div class="form-control">
-            <label for=""> Username </label>
-            <input type="text" id="username" placeholder="name123">
-            <i class="fa-solid fa-circle-check"></i>
-            <i class="fa-solid fa-exclamation"></i>
-            <small>Error message</small>
+<!-- ==================About section ends================================ -->
+
+
+
+<!-- ==================Service section starts================================ -->
+
+
+<section id="service">
+   <div class="service-heading">
+     <h1>My Awesome Service</h1>
+     <p>There are many variations of passages of Lorem Ipsum available, but the <br> majority have suffered alteration.
+    </p>
+   </div>
+   <div class="container">
+    <div class="service-card">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 22rem;">
+            <i><i class="fa-solid fa-camera"></i></i>
+            <div class="card-body">
+              <h5 class="card-title">Web Developer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="form-control">
-            <label for=""> Email </label>
-            <input type="email" id="email" placeholder="example@gmail.com">
-            <i class="fa-solid fa-circle-check"></i>
-            <i class="fa-solid fa-exclamation"></i>
-            <small>Error message</small>
+        <div class="col-md-4">
+          <div class="card" style="width: 22rem;">
+            <i><i class="fa-solid fa-camera"></i></i>
+            <div class="card-body">
+              <h5 class="card-title">Web Developer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="form-control">
-            <label for=""> Password </label>
-            <input type="password" id="password" placeholder="put password">
-            <i class="fa-solid fa-circle-check"></i>
-            <i class="fa-solid fa-exclamation"></i>
-            <small>Error message</small>
+        <div class="col-md-4">
+          <div class="card" style="width: 22rem;">
+            <i><i class="fa-solid fa-camera"></i></i>
+            <div class="card-body">
+              <h5 class="card-title">Web Developer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="form-control">
-            <label for=""> Confirm Password </label>
-            <input type="password" id="Cpassword" placeholder="check password">
-            <i class="fa-solid fa-circle-check"></i>
-            <i class="fa-solid fa-exclamation"></i>
-            <small>Error message</small>
+        <div class="col-md-4">
+           <div class="card" style="width: 22rem;">
+            <i><i class="fa-solid fa-camera"></i></i>
+            <div class="card-body">
+              <h5 class="card-title">Web Developer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
         </div>
+        <div class="col-md-4">
+           <div class="card" >
+            <i><i class="fa-solid fa-camera"></i></i>
+            <div class="card-body">
+              <h5 class="card-title">Web Developer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+           <div class="card" style="width: 22rem;">
+            <i><i class="fa-solid fa-camera"></i></i>
+            <div class="card-body">
+              <h5 class="card-title">Web Developer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+</section>
 
-        <button>Submit</button>
 
-    </form>
+<!-- ==================Service section ends================================== -->
+
+
+
+
+<!-- ==================Service section ends================================== -->
+
+<section id="portfolio">
+
+<div class="portfolio-header">
+  <h1>My Latest Project</h1>
+     <p>There are many variations of passages of Lorem Ipsum available, but the <br> majority have suffered alteration.
+    </p>
+</div>
+
+<div class="container">
+  <div class="gallery">
+    <div class="img-box">
+      <img src="images/wax.jpg" alt="">
+
+      <div class="overlay"></div>
+
+      <div class="gallery-text">
+        <p>Development</p>
+        <h3>Getting ticket to the big show</h3>
+        <button>CASE STUDY</button>
+      </div>
+
+    </div>
+    <div class="img-box">
+      <img src="images/about.jpg" alt="">
+
+      <div class="overlay"></div>
+      
+      <div class="gallery-text">
+        <p>Development</p>
+        <h3>Getting ticket to the big show</h3>
+        <button>CASE STUDY</button>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="images/wax.jpg" alt="">
+
+      <div class="overlay"></div>
+      
+      <div class="gallery-text">
+        <p>Development</p>
+        <h3>Getting ticket to the big show</h3>
+        <button>CASE STUDY</button>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="images/about.jpg" alt="">
+
+      <div class="overlay"></div>
+      
+      <div class="gallery-text">
+        <p>Development</p>
+        <h3>Getting ticket to the big show</h3>
+        <button>CASE STUDY</button>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="images/wax.jpg" alt="">
+
+      <div class="overlay"></div>
+      
+      <div class="gallery-text">
+        <p>Development</p>
+        <h3>Getting ticket to the big show</h3>
+        <button>CASE STUDY</button>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="images/about.jpg" alt="">
+
+      <div class="overlay"></div>
+      
+      <div class="gallery-text">
+        <p>Development</p>
+        <h3>Getting ticket to the big show</h3>
+        <button>CASE STUDY</button>
+      </div>
+    </div>
+  </div>
 
 </div>
 
+<div class="center">
+  <button class="no-btn">VIEW MORE</button>
+</div>
+
+</section>
+
+
+<!-- ==================Service section ends================================== -->
 
 
 
 
+<!-- ==================Blog section starts================================== -->
 
+<section id="blog">
+  <div class="blog-header">
+    <h1>My Latest Blog</h1>
+       <p>There are many variations of passages of Lorem Ipsum available, but the <br> majority have suffered alteration.
+      </p>
+  </div>
+
+  <div class="container">
+    <div class="gallery">
+      <div class="img-box">
+        <img src="images/blog.jpg" alt="">
   
-<script src="https://kit.fontawesome.com/8459f9b4a2.js" crossorigin="anonymous"></script>
+        <div class="overlay"></div>
+  
+        <div class="gallery-text">
+          <p>Development</p>
+          <h3>Getting ticket to the big show</h3>
+          <button>CASE STUDY</button>
+        </div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/blog.jpg" alt="">
+
+    <div class="overlay"></div>
+
+    <div class="gallery-text">
+      <p>Development</p>
+      <h3>Getting ticket to the big show</h3>
+      <button>CASE STUDY</button>
+    </div>
+
+  </div>
+
+  <div class="img-box">
+    <img src="images/blog.jpg" alt="">
+
+    <div class="overlay"></div>
+
+    <div class="gallery-text">
+      <p>Development</p>
+      <h3>Getting ticket to the big show</h3>
+      <button>CASE STUDY</button>
+    </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+
+<!-- ==================blog== section ends================================== -->
+
+
+
+<!-- ==================contact=== section ends================================== -->
+
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="contact-text">
+            <h1>HIRE ME</h1>
+            <p>I am available for freelance work. Connect with me via <br> phone: <span>01923088574</span>or email: <span>admin@example.com</span> 
+            </p>
+          </div>
+
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="redwan" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Message</label>
+              <input type="" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+        <div class="offset-1 col-md-5 ">
+          <div class="contact-img">
+          <img src="images/contact.jpg" alt="">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================contact== section ends================================== -->
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/8459f9b4a2.js" crossorigin="anonymous">
+  
+</script>
     <script src="script.js"></script>
 </body>
 </html>
