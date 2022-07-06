@@ -123,3 +123,48 @@ function openEducation() {
     btn3.classList.remove('active-btn');
 
 };
+
+
+
+// =========== nav scroll fixing ********============
+
+let navbar = document.getElementById('navbar');
+
+window.onscroll = function () {
+    scrollNav();
+}
+
+function scrollNav() {
+    if (document.body.scrollTop>400) {
+        navbar.classList.add('nav-scroll');
+    } else {
+        // navbar.style.transform = 'translateY(-100)';
+        navbar.classList.remove('nav-scroll');
+    }
+}
+
+
+// ************************** dark mode start********************************
+
+let darkMode = document.getElementById('dark-mode');
+let lightkMode = document.getElementById('light-mode');
+
+darkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-them')
+
+    if (document.body.classList.contains('dark-them')) {
+        lightkMode.style.visibility = 'visible';
+        darkMode.style.visibility = 'hidden';
+    } else {
+        darkMode.style.visibility = 'visible';
+        lightkMode.style.visibility = 'hidden';
+    }
+});
+
+// darkMode.onclick = function () {
+//     document.body.classList.toggle('dark-them')
+// };
+
+
+
+// ************************** dark mode end**********************************

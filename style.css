@@ -1,17 +1,54 @@
+:root {
+    --section-bg-color: #efeff0;
+    --section-bg1-color: #ffffff;
+    --section-box-bg-color: #e8e6e6;
+    --section-header-color:black;
+    --section-p-color: #59595a;
+    --navscroll-color: white;
+} 
+
+.dark-them {
+    --section-bg-color: #191919;
+    --section-box-bg-color: black;
+    --section-header-color:rgb(246, 241, 241);
+    --section-p-color: #888282;
+    --section-bg1-color: #000;
+    --navscroll-color: black;
+}
+
+
+
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
-    background-color:rgba(0, 0, 0, 0.684);
+    background-color: transparent;
     z-index: 999;
+}
+.nav-scroll {
+    background-color: var(--navscroll-color);
+    transition: linear 1s;
+    filter: drop-shadow(0 -10px 40px rgb(170, 170, 170));
+}
+.nav-scroll ul li a {
+    color: rgb(45, 45, 45) !important;
+    font-weight: 650;
+}
+.nav-scroll i {
+    color: rgb(80, 79, 79);
+}
+.nav-scroll button {
+    color: rgb(80, 79, 79);
+    border: 1px solid rgb(80, 79, 79);
 }
 
 ul li a {
-    color:  white !important;
-    font-size: 21px;
+    color:  #cac8c8 !important;
+    font-size: 16px;
     position: relative;
+    font-weight: 550;
 }
 ul li {
     padding: 0 22px;
@@ -25,16 +62,17 @@ ul li a:hover {
     color: rgb(132, 167, 195) !important;
 }
 i {
-    font-size: 26px;
+    padding-top: 4px;
+    font-size: 19px;
     margin-right: 20px;
     padding-right: 18px;
-    color: rgb(6, 244, 73);
+    color: #b9b7b7;
     align-items: center;
-    transition: .6s;
+    transition: .4s;
 }
 i:hover {
-    color: rgb(27, 24, 24);
-    transform: scale(1.2);
+    color: whitesmoke;
+    transform: scale(1.1);
 }
 
 
@@ -44,14 +82,47 @@ i:hover {
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 }
+
+
+.mode-change {
+    position: fixed;
+    bottom: 40;
+    left: 30;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 3px 5px 5px  rgba(0, 0, 0, 0.204);
+    z-index: 99;
+    transition: 0s;
+}
+.mode-change i {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-23%, -54%);
+   color: #313030;
+   font-size: 26px;
+}
+#light-mode {
+    visibility: hidden;
+    color: rgb(249, 180, 3);
+    transition: 0s !important;
+    font-size: 26px;
+}
+
+
+
 
 
 .banner {
     padding-top: 300px;
 }
 .banner p{
-    color: white;
+    color: var(--section-p-color);
     letter-spacing: 10px;
     font-size: 24px;
 }
@@ -85,19 +156,20 @@ i:hover {
 /* ******************* **About section starts *********************** */
 
 #about {
-    margin-top: 100px;
+    padding-top: 100px;
     padding-bottom: 70px;
+    background-color: var(--section-bg1-color);
 }
 .about-text {
     margin-top: 100px;
     color: #c04;
 }
 .about-text p {
-    color: #717173;
+    color: var(--section-p-color);
     font-size: 18px;
 }
 .about-text h1 {
-    color: rgb(18, 17, 17);
+    color: var(--section-header-color);
     font-weight: 800;
     font-size: 55px;
     padding-bottom: 24px;
@@ -116,7 +188,8 @@ i:hover {
     font-weight: 550;
     border-bottom: 3px solid #616161;
     transition: all .5s ease-in-out;
-    
+    color: var(--section-p-color);
+    transition: .4s;
 }
 /* .tabs button::after {
     position: absolute;
@@ -139,6 +212,7 @@ i:hover {
     position: absolute;
     top: 0;
     left: 0;
+    transition: .4s;
 }
  #tab-contant1 {
     visibility: visible;
@@ -154,7 +228,7 @@ i:hover {
     visibility: hidden;
  }
  .active-btn{
-    color: #ff0b07fe;
+    color: #ff0b07fe !important;
     border-bottom: 2px solid #ff0b07fe !important;
     transition: all .4s ease-in-out;
 }
@@ -163,11 +237,11 @@ i:hover {
 
 
 .tab-contant h6 {
-    color: #616161;
+    color: var(--section-p-color);
 }
 .tab-contant p, span {
     font-size: 16px;
-    color: #616161;
+    color: var(--section-p-color);
 }
 /* ***************about tabs******************* */
 
@@ -179,7 +253,7 @@ i:hover {
 /* ******************* service section starts******** *********************** */
 
 #service {
-    background-color: #efeff0;
+    background-color: var(--section-bg-color);
     width: 100%;
     padding-bottom: 60px;
 }
@@ -192,17 +266,18 @@ i:hover {
 .service-heading h1 {
     font-weight: 700;
     font-size: 60px;
+    color: var(--section-header-color);
 }
 .service-heading p {
     font-size: 22px;
-    color: #616161;
+    color: var(--section-p-color);
 }
 .service-card .card {
     padding: 5px 52px !important;
     transition: all .5s linear;
     border: none;
     border-radius: 10px;
-    background-color: #e8e6e6;
+    background-color: var(--section-box-bg-color);
     margin-top: 55px;
     margin-bottom: 32px;
     width: 95% !important;
@@ -225,11 +300,12 @@ i:hover {
 }
 .service-card .card .card-title {
     font-size: 30px;
+    color: var(--section-header-color);
 }
 .service-card .card .card-text {
     font-size: 22px;
     padding: 25px 0;
-    color: #616161;
+    color: var(--section-p-color);
 }
 
 
@@ -241,6 +317,10 @@ i:hover {
 
 
 /* ******************* protfolio section starts******** *********************** */
+#portfolio {
+    background-color: var(--section-bg1-color);
+}
+
 .portfolio-header {
     padding-top: 100px;
 }
@@ -250,10 +330,11 @@ i:hover {
 .portfolio-header h1 {
     font-weight: 700;
     font-size: 60px;
+    color: var(--section-header-color);
 }
 .portfolio-header p {
     font-size: 22px;
-    color: #616161;
+    color: var(--section-p-color);
 }
 
 
@@ -354,7 +435,7 @@ i:hover {
 
 
 #blog {
-    background-color: #efeff0;
+    background-color: var(--section-bg-color);
     width: 100%;
     padding-bottom: 60px;
 }
@@ -366,12 +447,89 @@ i:hover {
 }
 .blog-header h1 {
     font-weight: 700;
+    color: var(--section-header-color);
     font-size: 60px;
 }
 .blog-header p {
     font-size: 22px;
-    color: #616161;
+    color: var(--section-p-color);
 }
+
+
+.gallery> * {
+    flex: 1 1 30%;
+    position: relative;
+    transition: all .6s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+}
+.gallery .blog-img-box img {
+    width: 100%;
+    height: 430px;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1);
+    transition: .6s;
+}
+.gallery .blog-img-box .blog-text {
+    position: absolute;
+    bottom: -40;
+    left: 0;
+    text-align: left;
+    margin-left: 29px;
+    transition: .4s;
+}
+.gallery .blog-img-box:hover .blog-text {
+    bottom: 40;
+}
+.gallery .blog-img-box:hover button{
+    visibility: visible;
+}
+.gallery .blog-text p {
+    color: white;
+    font-size: 16px;
+    
+}
+.gallery .blog-text h3 {
+    color: white;
+    font-size: 25px;
+    letter-spacing: 2;
+}
+.gallery .blog-text button {
+    color: white;
+    font-size: 18px;
+    padding: 5px 18px;
+    background-color: transparent;
+    border: 1px solid #f31b5f;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: .5s;
+    visibility: hidden;
+}
+.gallery .blog-text button:hover {
+    background-color: #f31b5f;
+    transform: scale(.9);
+    border: none;
+}
+.gallery .blog-img-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B7033B;
+    opacity: 0;
+}
+
+.gallery .blog-img-box:hover .overlay {
+    opacity: .6;
+}
+.gallery .blog-img-box:hover img{
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+
 
 
 /* ******************* blog**** section end******** *********************** */
@@ -380,8 +538,8 @@ i:hover {
 /* ******************* contact section starts******** *********************** */
 
 #contact {
-    margin-top: 100px;
-    
+    padding-top: 100px;
+    background-color: var(--section-bg1-color);
 }
 .contact {
     padding-top: 50px;
@@ -399,6 +557,7 @@ i:hover {
 }
 .contact-text p {
     font-size: 20px;
+    color: var(--section-p-color);
 }
 .contact-text p span {
     font-weight: 550;
